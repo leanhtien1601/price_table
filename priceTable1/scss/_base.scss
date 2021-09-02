@@ -1,0 +1,332 @@
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
+b,
+strong,
+th {
+  font-weight: bold;
+}
+i,
+em {
+  font-style: italic;
+}
+i.fa {
+  font-style: normal;
+}
+sub,
+sup {
+  font-size: 75%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 20px 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+a {
+  display: inline-block;
+}
+ol,
+ul,
+li {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+label {
+  font-weight: normal;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+select {
+  padding-left: 8px;
+}
+input[type="number"] {
+  padding-left: 5px;
+}
+textarea {
+  padding: 8px 12px 5px 12px;
+}
+input,
+textarea,
+select,
+button,
+a {
+  outline: none;
+}
+button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+button:focus {
+  outline: none;
+}
+* {
+  padding-left: constant(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-top: constant(safe-area-inset-top);
+}
+
+@import "var";
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  @include object_fit(cover);
+}
+.smooth {
+  @include smooth(0.3s);
+}
+.col-mar-0 {
+  @include mar(0px);
+}
+.col-mar-0 > div[class^="col-"] {
+  @include pad(0px);
+}
+.col-mar-5 {
+  @include mar(-5px);
+}
+.col-mar-5 > div[class^="col-"] {
+  @include pad(5px);
+}
+.col-mar-8 {
+  @include mar(-8px);
+}
+.col-mar-8 > div[class^="col-"] {
+  @include pad(8px);
+}
+.col-mar-10 {
+  @include mar(-10px);
+}
+.col-mar-10 > div[class^="col-"] {
+  @include pad(10px);
+}
+.relative {
+  position: relative;
+}
+.static {
+  position: static;
+}
+.absolute {
+  position: absolute;
+}
+.c-img {
+  @extend %c-img;
+}
+.s-content {
+  @extend %s-content;
+}
+.hv-over {
+  @extend %hv-over;
+}
+.hv-scale {
+  @extend %hv-scale;
+}
+.hv-light {
+  @extend %hv-light;
+}
+
+
+body {
+  max-width: 1920px;
+  margin: auto;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+
+input.form-control,
+select.custom-select,
+textarea.form-control {
+  font-family: "OpenSans-Regular";
+  border: 1px solid #3b6773;
+  border-radius: 99px;
+  font-family: "OpenSans-Regular";
+  font-size: 16px;
+  color: #555555;
+  background-color: #fff;
+  @include place(#888888, 16px, normal, "OpenSans-Regular");
+}
+input.form-control:focus,
+select.custom-select:focus,
+textarea.form-control:focus {
+  color: #555555;
+  border-color: #3b6773;
+  outline: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+textarea.form-control {
+  resize: none;
+}
+select.custom-select {
+  font-size: 15px;
+  option {
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+}
+.title-section-all {
+  font-family: "Roboto-Bold";
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 1px;
+}
+.text-line3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.row-mx-5 {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.col-mx-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <style>
+        form{
+            padding: 30px 0;
+        }
+        .form-text{
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body style="background: #ffffff;">
+    <div class="container">
+        <form >
+            <div class="form-group">
+                <label for="exampleInputEmail1">Họ và tên</label>
+                <input type="text" class="form-control"
+                    placeholder="Nhập họ và tên" name="name" onblur="check_name();">
+                <small id="name_err"  class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email </label>
+                <input type="email" class="form-control"
+                    placeholder="Nhập email" name="email" id="email" onblur="check_email();">
+                <small id="email_err"  class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Mật khẩu</label>
+                <input type="password" class="form-control"  placeholder="Password" id="password" onblur="check_password();">
+                <small id="password_err"  class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Nhập lại mật khẩu</label>
+                <input type="password" class="form-control"  placeholder="Password" id="re_password" onblur="check_re_password();">
+                <small id="re_password_err"  class="form-text text-muted"></small>
+            </div>
+            <button type="button" onclick="kt()" class="btn btn-primary" id="upload" disabled>Submit</button>
+        </form>
+    </div>
+    <div class="detail-quick" id="detail-quick">
+        <div class="clo" onclick="closeAdd();">
+            <ion-icon name="close-circle-outline"></ion-icon>
+        </div>
+        <div class="row h-100">
+            <div class="col-xl-6 h-100 text-center">
+                <h1>Bạn đã đăng kí thành công</h1>
+            </div>
+            <div class="col-xl-6 h-100 text-center">
+                <h1>Thanh you</h1>
+            </div>
+        </div>
+    </div>
+    <div class="bg_01"></div>
+    <footer>
+</body>
+<script src="js/script.js"></script>
+</html>
